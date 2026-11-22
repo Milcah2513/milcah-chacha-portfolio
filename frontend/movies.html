@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Milcah Chacha's top five favourite movies.">
+    <title>Top 5 Movies | Milcah Chacha</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="./index.html" class="logo">Milcah<span>.</span></a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./academic.html">Academic Journey</a></li>
+            <li><a href="./hobbies.html">Hobbies</a></li>
+            <li><a href="./movies.html" class="active">Top 5 Movies</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+    </nav>
+</header>
+
+<main>
+    <section class="movies-hero">
+        <div class="container">
+            <p class="section-label">MY ENTERTAINMENT PICKS</p>
+            <h1>My Top 5 Movies</h1>
+            <p>
+                A collection of five movies I enjoy, ranked in my
+                personal order of preference.
+            </p>
+        </div>
+    </section>
+
+    <section class="movies-section container">
+        <div class="movies-heading">
+            <div>
+                <p class="section-label">FAVOURITES</p>
+                <h2>Movies I Love Watching</h2>
+            </div>
+            <p class="movies-count" id="movies-count">Loading movies...</p>
+        </div>
+
+        <div id="movies-container" class="movies-grid">
+            <p class="loading-message">Loading movie collection...</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Milcah Chacha.
+        All rights reserved.</p>
+</footer>
+
+<script src="./assets/js/api.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/movies.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The personal portfolio of Milcah Chacha.">
+    <title>Milcah Chacha | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a href="./index.html" class="logo">
+                Milcah<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="./index.html" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="./academic.html">Academic Journey</a>
+                </li>
+
+                <li>
+                    <a href="./hobbies.html">Hobbies</a>
+                </li>
+
+                <li>
+                    <a href="./movies.html">Top 5 Movies</a>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        WELCOME TO MY PORTFOLIO
+                    </p>
+
+                    <h1>
+                        Hello, I'm
+                        <span id="profile-name">Milcah Chacha</span>
+                    </h1>
+
+                    <h2 id="profile-headline">
+                        Discover my story, interests and journey.
+                    </h2>
+
+                    <p id="profile-bio">
+                        Welcome to my personal portfolio. Explore my academic
+                        journey, skills, hobbies and favourite movies.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="./academic.html" class="btn btn-primary">
+                            Explore My Journey
+                        </a>
+
+                        <a href="./contact.html" class="btn btn-outline">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        id="profile-image"
+                        src="./assets/images/profile-placeholder.jpg"
+                        alt="Milcah Chacha"
+                        onerror="this.style.display='none'"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">GET TO KNOW ME</p>
+
+                    <h2>About Me</h2>
+
+                    <p>
+                        A little introduction to who I am and what makes me unique.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <p id="about-bio">
+                        My personal story and background will appear here.
+                        Visit the other sections to discover more about me.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTFOLIO QUICK LINKS -->
+        <section class="quick-links section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">EXPLORE</p>
+
+                    <h2>Discover More About Me</h2>
+
+                </div>
+
+                <div class="feature-grid">
+
+                    <a href="./academic.html" class="feature-card">
+
+                        <span class="feature-icon">🎓</span>
+
+                        <h3>Academic Journey</h3>
+
+                        <p>
+                            Explore my education, skills, projects and interests.
+                        </p>
+
+                    </a>
+
+
+                    <a href="./hobbies.html" class="feature-card">
+
+                        <span class="feature-icon">🌸</span>
+
+                        <h3>My Hobbies</h3>
+
+                        <p>
+                            Discover the activities I enjoy in my free time.
+                        </p>
+
+                    </a>
+
+
+                    <a href="./movies.html" class="feature-card">
+
+                        <span class="feature-icon">🎬</span>
+
+                        <h3>Top 5 Movies</h3>
+
+                        <p>
+                            Take a look at my favourite movies and why I love them.
+                        </p>
+
+                    </a>
+
+
+                    <a href="./contact.html" class="feature-card">
+
+                        <span class="feature-icon">✉️</span>
+
+                        <h3>Get In Touch</h3>
+
+                        <p>
+                            Have a question or message? I'd love to hear from you.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy;
+                <span id="current-year"></span>
+                Milcah Chacha. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
