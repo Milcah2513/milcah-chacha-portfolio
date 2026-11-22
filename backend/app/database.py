@@ -19,7 +19,7 @@ def get_supabase_client() -> Client:
         SUPABASE_SECRET_KEY
     )
 
-    return client
+    return client 
 
 
 # Shared Supabase client
