@@ -3,8 +3,8 @@
 // MILCAH CHACHA PORTFOLIO - API CONFIGURATION
 // ============================================
 
-// Local development API
-const API_BASE_URL = "http://127.0.0.1:8000";
+// Production API (Render)
+const API_BASE_URL = "https://milcah-chacha-portfolio.onrender.com";
 
 
 /**
