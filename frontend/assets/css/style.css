@@ -1496,3 +1496,46 @@ textarea {
     }
 
 }
+
+/* ==========================================
+   HOMEPAGE INTRODUCTION - PROPER PROSE
+   ========================================== */
+
+.hero-text {
+    width: 100%;
+    max-width: 650px;
+}
+
+.hero-text #profile-bio {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    margin: 18px 0 25px;
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 400;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-align-last: left;
+}
+
+@media (max-width: 700px) {
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text #profile-bio {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.85;
+        text-align: left;
+        white-space: normal;
+    }
+}
