@@ -21,5 +21,10 @@ A responsive personal portfolio website.
 Backend setup instructions will be added
 as development progresses.
 Milcah's Portfolio Database ERD
+### Milcah's Portfolio Database ERD
+
+This document illustrates the structure of Milcah's portfolio database, including its six tables, primary keys, foreign keys, and relationships.
+
+[View Milcah's Portfolio Database ERD (PDF)](https://github.com/Milcah2513/milcah-chacha-portfolio/blob/main/Micah%20Doc.pdf)
 
 
