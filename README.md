@@ -4,13 +4,11 @@ A responsive personal portfolio website developed to showcase academic backgroun
 
 ## 1. Live Portfolio Website
 
-**Portfolio Website:** [Visit Milcah Chacha Portfolio](https://github.com/Milcah2513/milcah-chacha-portfolio)
+**Visit the deployed website:**
 
-*Note: The link currently points to the GitHub repository. Replace it with the actual Netlify deployment URL when available.*
+[Milcah Chacha – Personal Portfolio](https://milcah-chacha-portfolio.netlify.app/)
 
 ## 2. GitHub Repository
-
-The complete project source code is available on GitHub.
 
 [View GitHub Repository](https://github.com/Milcah2513/milcah-chacha-portfolio)
 
@@ -24,8 +22,6 @@ The complete project source code is available on GitHub.
 
 ## 4. Project Structure
 
-The project is organised into two main directories:
-
 - `frontend/` – Contains the website interface and frontend resources.
 - `backend/` – Contains the API and database integration.
 
@@ -38,8 +34,6 @@ Backend setup instructions will be added as development progresses.
 ## 6. Database Documentation
 
 This section provides documentation of Milcah's portfolio database, including its six tables, primary keys, foreign keys, and relationships.
-
-The database documentation illustrates how the different tables are structured and connected to support the portfolio website.
 
 ### Database Entity Relationship Diagram (ERD)
 
