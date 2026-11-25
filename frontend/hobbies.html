@@ -1,94 +1,261 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Milcah Chacha's hobbies and interests.">
+
+    <meta name="description"
+          content="Discover Milcah Chacha's hobbies, interests and favourite personal activities.">
+
+    <meta name="author" content="Milcah Chacha">
+    <meta name="theme-color" content="#183047">
+
     <title>My Hobbies | Milcah Chacha</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-    <nav class="navbar container">
-        <a href="index.html" class="logo">Milcah<span>.</span></a>
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
 
-        <button class="menu-toggle" id="menu-toggle"
-                aria-label="Toggle navigation" aria-expanded="false">
-            ☰
-        </button>
+    <header class="site-header">
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="academic.html">Academic Journey</a></li>
-            <li><a href="hobbies.html" class="active">Hobbies</a></li>
-            <li><a href="movies.html">Top 5 Movies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="navbar container" aria-label="Main navigation">
 
-<main>
+            <a href="./index.html" class="logo">
+                Milcah<span>.</span>
+            </a>
 
-    <section class="academic-hero hobbies-hero">
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="./academic.html">Academic Journey</a>
+                </li>
+
+                <li>
+                    <a href="./hobbies.html" class="active" aria-current="page">
+                        Hobbies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./movies.html">Top 5 Movies</a>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main>
+
+        <!-- HOBBIES HERO -->
+
+        <section class="academic-hero hobbies-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    LIFE BEYOND THE CLASSROOM
+                </p>
+
+                <h1>
+                    My Hobbies
+                </h1>
+
+                <p>
+                    A glimpse into the activities and interests
+                    that are part of my personal life.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOBBIES COLLECTION -->
+
+        <section class="section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        WHAT I ENJOY
+                    </p>
+
+                    <h2>
+                        Things I Love Doing
+                    </h2>
+
+                    <p>
+                        Explore some of my hobbies and personal interests.
+                        These activities allow me to relax, learn new things
+                        and enjoy meaningful experiences.
+                    </p>
+
+                </div>
+
+
+                <div id="hobbies-container" class="hobbies-grid">
+
+                    <p class="loading-message">
+                        Loading hobbies...
+                    </p>
+
+                </div>
+
+
+                <p
+                    id="hobbies-error"
+                    class="error-message"
+                    hidden
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL BALANCE SECTION -->
+
+        <section class="section-padding academic-alt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        A BALANCED LIFE
+                    </p>
+
+                    <h2>
+                        Beyond Academics
+                    </h2>
+
+                    <p>
+                        Personal interests are an important part of
+                        discovering new experiences and enjoying life.
+                        They provide opportunities for creativity,
+                        relaxation and continuous personal growth.
+                    </p>
+
+                </div>
+
+
+                <div class="academic-grid">
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">🌱</div>
+
+                        <h3>Personal Growth</h3>
+
+                        <p>
+                            Exploring different interests creates
+                            opportunities to learn, develop new skills
+                            and discover new perspectives.
+                        </p>
+
+                    </article>
+
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">✨</div>
+
+                        <h3>Creativity</h3>
+
+                        <p>
+                            Personal activities provide room for
+                            self-expression, imagination and
+                            discovering new ideas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">💙</div>
+
+                        <h3>Well-being</h3>
+
+                        <p>
+                            Making time for enjoyable activities
+                            helps create a healthy balance between
+                            responsibilities and personal life.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
         <div class="container">
-            <p class="eyebrow">LIFE BEYOND THE CLASSROOM</p>
-            <h1>My Hobbies</h1>
+
             <p>
-                A glimpse into the activities and interests
-                that are part of my personal life.
+                &copy;
+                <span id="current-year"></span>
+                Milcah Chacha. All rights reserved.
             </p>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="eyebrow">WHAT I ENJOY</p>
-                <h2>Things I Love Doing</h2>
-                <p>
-                    Explore some of my hobbies and personal interests.
-                </p>
-            </div>
-
-            <div id="hobbies-container" class="hobbies-grid">
-                <p class="loading-message">Loading hobbies...</p>
-            </div>
-
-            <p id="hobbies-error" class="error-message" hidden></p>
 
         </div>
-    </section>
 
-    <section class="section-padding academic-alt">
-        <div class="container">
-            <div class="section-heading">
-                <p class="eyebrow">A BALANCED LIFE</p>
-                <h2>Beyond Academics</h2>
-                <p>
-                    Personal interests are an important part of
-                    discovering new experiences and enjoying life.
-                </p>
-            </div>
-        </div>
-    </section>
+    </footer>
 
-</main>
 
-<footer class="site-footer">
-    <div class="container">
-        <p>
-            &copy; <span id="current-year"></span>
-            Milcah Chacha. All rights reserved.
-        </p>
-    </div>
-</footer>
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
 
-<script src="assets/js/api.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/hobbies.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/hobbies.js"></script>
 
 </body>
+
 </html>

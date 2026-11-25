@@ -1,14 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explore the personal portfolio of Milcah Chacha, featuring her academic journey, personal interests, experiences and aspirations.">
+    <meta name="description"
+          content="Explore the personal portfolio of Milcah Chacha, featuring her academic journey, personal interests, experiences and aspirations.">
 
     <meta name="author" content="Milcah Chacha">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#183047">
 
     <title>Milcah Chacha | Personal Portfolio</title>
 
@@ -17,51 +19,78 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="site-header">
-        <nav class="navbar container">
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
 
-            <a href="./index.html" class="logo">
+    <header class="site-header">
+
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="./index.html" class="logo" aria-label="Milcah home">
                 Milcah<span>.</span>
             </a>
 
-            <button class="menu-toggle"
-                    id="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
             <ul class="nav-links" id="nav-links">
+
                 <li>
-                    <a href="./index.html" class="active">Home</a>
+                    <a href="./index.html" class="active" aria-current="page">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./academic.html">Academic Journey</a>
+                    <a href="./academic.html">
+                        Academic Journey
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./hobbies.html">Hobbies</a>
+                    <a href="./hobbies.html">
+                        Hobbies
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./movies.html">Top 5 Movies</a>
+                    <a href="./movies.html">
+                        Top 5 Movies
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./contact.html">Contact</a>
+                    <a href="./contact.html">
+                        Contact
+                    </a>
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
 
     <main>
 
         <!-- HERO SECTION -->
+
         <section class="hero">
+
             <div class="container hero-content">
 
                 <div class="hero-text">
@@ -106,29 +135,40 @@
 
                 </div>
 
+
                 <div class="hero-image">
+
                     <img
                         id="profile-image"
                         src="./assets/images/profile-placeholder.jpg"
                         alt="Portrait of Milcah Chacha"
                         onerror="this.style.display='none'"
                     >
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- ABOUT SECTION -->
+        <!-- ==========================================
+             ABOUT SECTION
+        =========================================== -->
+
         <section class="about-section section-padding">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+                    <p class="eyebrow">
+                        A LITTLE ABOUT ME
+                    </p>
 
-                    <h2>Getting to Know Me</h2>
+                    <h2>
+                        Getting to Know Me
+                    </h2>
 
                     <p>
                         Every individual has a unique story shaped by
@@ -136,6 +176,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="about-card">
 
@@ -156,16 +197,23 @@
         </section>
 
 
-        <!-- PORTFOLIO QUICK LINKS -->
+        <!-- ==========================================
+             PORTFOLIO QUICK LINKS
+        =========================================== -->
+
         <section class="quick-links section-padding">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <p class="eyebrow">EXPLORE MY WORLD</p>
+                    <p class="eyebrow">
+                        EXPLORE MY WORLD
+                    </p>
 
-                    <h2>Discover More About Me</h2>
+                    <h2>
+                        Discover More About Me
+                    </h2>
 
                     <p>
                         Explore the different sections of my portfolio to
@@ -174,6 +222,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="feature-grid">
 
@@ -242,16 +291,23 @@
         </section>
 
 
-        <!-- CLOSING SECTION -->
+        <!-- ==========================================
+             CLOSING SECTION
+        =========================================== -->
+
         <section class="about-section section-padding">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <p class="eyebrow">LOOKING AHEAD</p>
+                    <p class="eyebrow">
+                        LOOKING AHEAD
+                    </p>
 
-                    <h2>A Journey of Continuous Growth</h2>
+                    <h2>
+                        A Journey of Continuous Growth
+                    </h2>
 
                     <p>
                         I believe that personal development is an ongoing
@@ -263,9 +319,11 @@
                     </p>
 
                     <div class="hero-buttons">
+
                         <a href="./contact.html" class="btn btn-primary">
                             Connect With Me
                         </a>
+
                     </div>
 
                 </div>
@@ -277,7 +335,10 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
     <footer class="site-footer">
 
         <div class="container">
@@ -293,9 +354,13 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
     <script src="./assets/js/api.js"></script>
     <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>

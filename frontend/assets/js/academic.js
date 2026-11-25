@@ -3,6 +3,39 @@
 // MILCAH CHACHA - ACADEMIC JOURNEY
 // ============================================
 
+// ============================================
+// EDUCATION IMAGES
+// ============================================
+
+const EDUCATION_IMAGES = {
+    jkuat: "assets/images/education/jkuat-main-gate.jpg",
+    default: "assets/images/education/education-placeholder.jpg"
+};
+
+
+// ============================================
+// GET THE APPROPRIATE EDUCATION IMAGE
+// ============================================
+
+function getEducationImage(item) {
+
+    const institution = String(item.institution || "").toLowerCase();
+
+    if (
+        institution.includes("jkuat") ||
+        institution.includes("jomo kenyatta")
+    ) {
+        return EDUCATION_IMAGES.jkuat;
+    }
+
+    return item.image_url || EDUCATION_IMAGES.default;
+}
+
+
+// ============================================
+// LOAD ACADEMIC INFORMATION
+// ============================================
+
 async function loadAcademicInformation() {
 
     const educationContainer =
@@ -40,20 +73,31 @@ async function loadAcademicInformation() {
                     ? item.expected_graduation_year
                     : "Not specified";
 
+                const image = getEducationImage(item);
+
                 return `
                     <article class="education-card">
 
-                        <div class="education-marker">
-                            🎓
+                        <div class="education-image-wrapper">
+                            <img
+                                src="${escapeHTML(image)}"
+                                alt="${escapeHTML(item.institution || "Educational institution")}"
+                                class="education-image"
+                                loading="lazy"
+                            >
                         </div>
 
                         <div class="education-content">
 
                             <span class="education-period">
-                                ${item.start_year} - ${graduation}
+                                ${escapeHTML(item.start_year || "Not specified")}
+                                -
+                                ${escapeHTML(graduation)}
                             </span>
 
-                            <h3>${escapeHTML(item.qualification)}</h3>
+                            <h3>
+                                ${escapeHTML(item.qualification)}
+                            </h3>
 
                             <p class="education-institution">
                                 ${escapeHTML(item.institution)}
@@ -70,7 +114,26 @@ async function loadAcademicInformation() {
 
             }).join("");
 
+            // Use a fallback if an image cannot be loaded.
+            document.querySelectorAll(".education-image").forEach(img => {
+
+                img.addEventListener("error", function () {
+
+                    if (
+                        this.src !== new URL(
+                            EDUCATION_IMAGES.default,
+                            window.location.href
+                        ).href
+                    ) {
+                        this.src = EDUCATION_IMAGES.default;
+                    }
+
+                });
+
+            });
+
         }
+
 
         // ====================================
         // DISPLAY SKILLS
@@ -88,9 +151,15 @@ async function loadAcademicInformation() {
 
             skillsContainer.innerHTML = skills.map(skill => `
                 <article class="skill-card">
+
                     <h3>${escapeHTML(skill.skill_name)}</h3>
+
                     <p>${escapeHTML(skill.category || "Skill")}</p>
-                    <span>${escapeHTML(skill.proficiency || "")}</span>
+
+                    <span>
+                        ${escapeHTML(skill.proficiency || "")}
+                    </span>
+
                 </article>
             `).join("");
 
@@ -103,6 +172,7 @@ async function loadAcademicInformation() {
         educationContainer.innerHTML = "";
 
         errorMessage.hidden = false;
+
         errorMessage.textContent =
             "Unable to load academic information. Please try again later.";
 
@@ -134,6 +204,8 @@ function escapeHTML(value) {
 }
 
 
+// ============================================
 // LOAD PAGE INFORMATION
+// ============================================
 
 loadAcademicInformation();

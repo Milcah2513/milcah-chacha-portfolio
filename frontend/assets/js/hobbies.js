@@ -1,22 +1,39 @@
 
+ // ============================================
+ // MILCAH CHACHA - HOBBIES PAGE
+ // ============================================
+
+// Hobby images and fallback icons
+const HOBBY_DATA = {
+    "bike riding": {
+        image: "assets/images/hobbies/bike-riding.jpeg",
+        icon: "🚴"
+    },
+
+    "drawing": {
+        image: "assets/images/hobbies/drawing.jpeg",
+        icon: "🎨"
+    },
+
+    "skating": {
+        image: "assets/images/hobbies/skating.jpeg",
+        icon: "🛼"
+    }
+};
+
 // ============================================
-// MILCAH CHACHA - HOBBIES PAGE
+// LOAD HOBBIES
 // ============================================
 
 async function loadHobbies() {
-
     const container = document.getElementById("hobbies-container");
     const errorMessage = document.getElementById("hobbies-error");
 
-    const hobbyIcons = {
-        "bike riding": "🚴",
-        "drawing": "🎨",
-        "skating": "🛼"
-    };
+    if (!container) return;
 
     try {
-
         const portfolio = await getPortfolio();
+
         const hobbies = portfolio.hobbies || [];
 
         if (hobbies.length === 0) {
@@ -30,43 +47,83 @@ async function loadHobbies() {
 
         container.innerHTML = hobbies.map(hobby => {
 
-            const icon = hobbyIcons[
-                String(hobby.hobby_name).toLowerCase()
-            ] || "✨";
+            const hobbyName = String(
+                hobby.hobby_name || "Personal Interest"
+            );
 
-            const image = hobby.image_url
+            const hobbyInfo =
+                HOBBY_DATA[hobbyName.toLowerCase()] || {
+                    image: "",
+                    icon: "✨"
+                };
+
+            const image = hobbyInfo.image
                 ? `
                     <img
                         class="hobby-image"
-                        src="${escapeHobbyHTML(hobby.image_url)}"
-                        alt="${escapeHobbyHTML(hobby.hobby_name)}"
-                        onerror="this.style.display='none'"
+                        src="${hobbyInfo.image}"
+                        alt="${escapeHobbyHTML(hobbyName)}"
+                        data-fallback-icon="${hobbyInfo.icon}"
+                        loading="lazy"
                     >
                 `
                 : `
                     <div class="hobby-icon" aria-hidden="true">
-                        ${icon}
+                        ${hobbyInfo.icon}
                     </div>
                 `;
 
             const description = hobby.description
-                ? `<p>${escapeHobbyHTML(hobby.description)}</p>`
+                ? `
+                    <p>
+                        ${escapeHobbyHTML(hobby.description)}
+                    </p>
+                `
                 : "";
 
             return `
                 <article class="hobby-card">
+
                     <div class="hobby-visual">
                         ${image}
                     </div>
 
                     <div class="hobby-card-content">
-                        <h3>${escapeHobbyHTML(hobby.hobby_name)}</h3>
+
+                        <h3>
+                            ${escapeHobbyHTML(hobbyName)}
+                        </h3>
+
                         ${description}
+
                     </div>
+
                 </article>
             `;
 
         }).join("");
+
+        // ====================================
+        // IMAGE ERROR FALLBACK
+        // ====================================
+
+        container.querySelectorAll(".hobby-image").forEach(img => {
+
+            img.addEventListener("error", function () {
+
+                const icon = document.createElement("div");
+
+                icon.className = "hobby-icon";
+                icon.setAttribute("aria-hidden", "true");
+
+                icon.textContent =
+                    this.dataset.fallbackIcon || "✨";
+
+                this.replaceWith(icon);
+
+            }, { once: true });
+
+        });
 
     } catch (error) {
 
@@ -74,14 +131,19 @@ async function loadHobbies() {
 
         container.innerHTML = "";
 
-        errorMessage.hidden = false;
-        errorMessage.textContent =
-            "Unable to load hobbies. Please try again later.";
+        if (errorMessage) {
+            errorMessage.hidden = false;
+
+            errorMessage.textContent =
+                "Unable to load hobbies. Please try again later.";
+        }
     }
 }
 
+// ============================================
+// HTML ESCAPE FUNCTION
+// ============================================
 
-// Escape database text before inserting it into HTML
 function escapeHobbyHTML(value) {
 
     return String(value ?? "").replace(/[&<>"']/g, character => {
@@ -95,9 +157,12 @@ function escapeHobbyHTML(value) {
         };
 
         return entities[character];
+
     });
 }
 
+// ============================================
+// INITIALIZE HOBBIES PAGE
+// ============================================
 
-// Load hobbies when the page opens
 loadHobbies();

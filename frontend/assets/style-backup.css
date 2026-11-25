@@ -1,0 +1,164 @@
+
+/* 8. ACADEMIC JOURNEY PAGE
+   ===================================================== */
+
+.academic-hero {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #eaf5ff, #d6eaff);
+}
+
+.academic-hero h1 {
+    color: #153e65;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 15px 0;
+}
+
+.academic-hero p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #52677d;
+    line-height: 1.8;
+}
+
+.academic-alt {
+    background: #f3f8fd;
+}
+
+.education-list {
+    max-width: 950px;
+    margin: 40px auto 0;
+    display: grid;
+    gap: 25px;
+}
+
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    background: var(--white);
+    border: 1px solid #e1edf8;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(30, 75, 115, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 30px rgba(30, 75, 115, 0.11);
+}
+
+/* Education photograph */
+
+.education-image-wrapper {
+    width: 240px;
+    min-width: 240px;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e7f2ff;
+}
+
+.education-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Education information */
+
+.education-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.education-period {
+    display: inline-block;
+    color: #2476bd;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.education-content h3 {
+    color: #173f64;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 750;
+    margin-bottom: 12px;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.education-institution {
+    color: #64758a;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+
+.education-status {
+    display: inline-block;
+    background: #e8f6ee;
+    color: #217346;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.academic-placeholder {
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: var(--white);
+    border: 1px dashed #b9d3ec;
+    border-radius: 14px;
+    color: #65788c;
+    text-align: center;
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.academic-info-card,
+.skill-card {
+    background: var(--white);
+    padding: 28px;
+    border: 1px solid #e3edf6;
+    border-radius: 15px;
+    box-shadow: 0 7px 22px rgba(30, 75, 115, 0.06);
+}
+
+.academic-icon {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.academic-info-card h3,
+.skill-card h3 {
+    color: #173f64;
+    margin-bottom: 12px;
+}
+
+.academic-info-card p,
+.skill-card p {
+    color: #64758a;
+    line-height: 1.7;
+}
+
+.skill-card span {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2476bd;
+    font-weight: 600;
+}
