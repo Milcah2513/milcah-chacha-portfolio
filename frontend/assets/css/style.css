@@ -174,12 +174,32 @@ button {
     color: var(--primary);
 }
 
+/* Navigation list */
+
 .nav-links {
     list-style: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 8px;
+    margin-left: auto;
+    padding: 0;
 }
+
+/* Explicit navigation order */
+
+.nav-links li {
+    order: 0;
+}
+
+/* Profile always appears first */
+
+.nav-links li:first-child {
+    order: -100;
+}
+
+/* Navigation links */
 
 .nav-links a {
     display: block;
@@ -201,6 +221,8 @@ button {
     background: var(--primary-light);
     font-weight: 750;
 }
+
+/* Mobile menu button */
 
 .menu-toggle {
     display: none;
@@ -328,7 +350,7 @@ button {
     filter: blur(2px);
 }
 
-/* CIRCULAR PROFILE PICTURE */
+/* Circular profile picture */
 
 .hero-image img {
     position: relative;
@@ -1148,12 +1170,21 @@ button {
         right: 0;
         flex-direction: column;
         align-items: stretch;
+        justify-content: flex-start;
         gap: 5px;
         padding: 15px;
         background: var(--white);
         border: 1px solid var(--border);
         border-radius: 0 0 12px 12px;
         box-shadow: 0 12px 25px rgba(20, 60, 100, 0.1);
+    }
+
+    .nav-links li {
+        order: 0;
+    }
+
+    .nav-links li:first-child {
+        order: -100;
     }
 
     .nav-links.show {
@@ -1356,29 +1387,8 @@ button {
 
 
 /* =====================================================
-   17. ACCESSIBILITY AND REDUCED MOTION
+   17. CONTACT PAGE IMAGE
    ===================================================== */
-
-:focus-visible {
-    outline: 3px solid rgba(37, 131, 216, 0.55);
-    outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
-
-}
-/* =========================================
-   CONTACT PAGE IMAGE
-========================================= */
 
 .contact-image {
     width: 100%;
@@ -1403,16 +1413,18 @@ button {
     transform: scale(1.04);
 }
 
-/* Mobile responsiveness */
-
 @media (max-width: 550px) {
+
     .contact-image img {
         height: 220px;
     }
+
 }
-/* =========================================
-   MOVIES FEATURE IMAGE
-========================================= */
+
+
+/* =====================================================
+   18. MOVIES FEATURE IMAGE
+   ===================================================== */
 
 .movies-feature-section {
     padding: 45px 0 20px;
@@ -1470,17 +1482,20 @@ button {
     line-height: 1.7;
 }
 
-/* TABLET */
+/* Movies image tablet */
 
 @media (max-width: 760px) {
+
     .movies-feature-image {
         height: 340px;
     }
+
 }
 
-/* MOBILE */
+/* Movies image mobile */
 
 @media (max-width: 550px) {
+
     .movies-feature-section {
         padding: 30px 0 10px;
     }
@@ -1497,5 +1512,28 @@ button {
     .movies-feature-caption span {
         font-size: 0.85rem;
     }
+
 }
 
+
+/* =====================================================
+   19. ACCESSIBILITY AND REDUCED MOTION
+   ===================================================== */
+
+:focus-visible {
+    outline: 3px solid rgba(37, 131, 216, 0.55);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

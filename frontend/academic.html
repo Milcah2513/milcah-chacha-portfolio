@@ -1,144 +1,328 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Milcah Chacha's academic journey, education and skills.">
+
+    <meta name="description"
+          content="Explore Milcah Chacha's academic journey, education and skills.">
+
+    <meta name="author" content="Milcah Chacha">
+    <meta name="theme-color" content="#183047">
+
     <title>Academic Journey | Milcah Chacha</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-    <nav class="navbar container">
-        <a href="index.html" class="logo">Milcah<span>.</span></a>
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
 
-        <button class="menu-toggle" id="menu-toggle"
-                aria-label="Toggle navigation" aria-expanded="false">
-            ☰
-        </button>
+    <header class="site-header">
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="academic.html" class="active">Academic Journey</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="movies.html">Top 5 Movies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="navbar container" aria-label="Main navigation">
 
-<main>
+            <a href="./index.html" class="logo" aria-label="Milcah home">
+                Milcah<span>.</span>
+            </a>
 
-    <section class="academic-hero">
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="./index.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./academic.html"
+                       class="active"
+                       aria-current="page">
+                        Academic Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./hobbies.html">
+                        Hobbies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./movies.html">
+                        Top 5 Movies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./contact.html">
+                        Get In Touch
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main>
+
+        <!-- ACADEMIC HERO -->
+
+        <section class="academic-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    MY EDUCATION AND DEVELOPMENT
+                </p>
+
+                <h1>
+                    Academic Journey
+                </h1>
+
+                <p>
+                    Discover my educational background, academic progress
+                    and the skills I develop along the way.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EDUCATION SECTION
+        =========================================== -->
+
+        <section class="section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        WHERE MY JOURNEY BEGINS
+                    </p>
+
+                    <h2>
+                        Education
+                    </h2>
+
+                    <p>
+                        My academic qualifications and educational progress.
+                    </p>
+
+                </div>
+
+
+                <div id="education-container" class="education-list">
+
+                    <p class="loading-message">
+                        Loading education information...
+                    </p>
+
+                </div>
+
+
+                <p
+                    id="education-error"
+                    class="error-message"
+                    hidden
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SKILLS AND COMPETENCIES
+        =========================================== -->
+
+        <section class="section-padding academic-alt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        WHAT I AM LEARNING
+                    </p>
+
+                    <h2>
+                        Skills and Competencies
+                    </h2>
+
+                    <p>
+                        Skills and competencies will be added as my
+                        academic and professional journey develops.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="skills-container"
+                    class="academic-placeholder"
+                >
+
+                    <p>
+                        Skills information has not been added yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROJECTS AND RESEARCH INTERESTS
+        =========================================== -->
+
+        <section class="section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        CONTINUOUS DEVELOPMENT
+                    </p>
+
+                    <h2>
+                        Projects and Research Interests
+                    </h2>
+
+                    <p>
+                        This section will showcase academic projects
+                        and research interests.
+                    </p>
+
+                </div>
+
+
+                <div class="academic-grid">
+
+                    <!-- RESEARCH INTERESTS -->
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">
+                            🔬
+                        </div>
+
+                        <h3>
+                            Research Interests
+                        </h3>
+
+                        <p>
+                            Research interests will be added when
+                            provided.
+                        </p>
+
+                    </article>
+
+
+                    <!-- ACADEMIC PROJECTS -->
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            Academic Projects
+                        </h3>
+
+                        <p>
+                            Academic projects will be displayed here
+                            as they become available.
+                        </p>
+
+                    </article>
+
+
+                    <!-- CERTIFICATIONS -->
+
+                    <article class="academic-info-card">
+
+                        <div class="academic-icon">
+                            🏆
+                        </div>
+
+                        <h3>
+                            Certifications
+                        </h3>
+
+                        <p>
+                            Certifications and achievements will be
+                            added when provided.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
         <div class="container">
-            <p class="eyebrow">MY EDUCATION AND DEVELOPMENT</p>
-            <h1>Academic Journey</h1>
+
             <p>
-                Discover my educational background, academic progress
-                and the skills I develop along the way.
+                &copy;
+                <span id="current-year"></span>
+                Milcah Chacha. All rights reserved.
             </p>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="eyebrow">WHERE MY JOURNEY BEGINS</p>
-                <h2>Education</h2>
-                <p>My academic qualifications and educational progress.</p>
-            </div>
-
-            <div id="education-container" class="education-list">
-                <p class="loading-message">Loading education information...</p>
-            </div>
-
-            <p id="education-error" class="error-message" hidden></p>
 
         </div>
-    </section>
 
-    <section class="section-padding academic-alt">
-        <div class="container">
+    </footer>
 
-            <div class="section-heading">
-                <p class="eyebrow">WHAT I AM LEARNING</p>
-                <h2>Skills and Competencies</h2>
-                <p>
-                    Skills and competencies will be added as my
-                    academic and professional journey develops.
-                </p>
-            </div>
 
-            <div id="skills-container" class="academic-placeholder">
-                <p>Skills information has not been added yet.</p>
-            </div>
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
 
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="eyebrow">CONTINUOUS DEVELOPMENT</p>
-                <h2>Projects and Research Interests</h2>
-                <p>
-                    This section will showcase academic projects
-                    and research interests.
-                </p>
-            </div>
-
-            <div class="academic-grid">
-
-                <article class="academic-info-card">
-                    <div class="academic-icon">🔬</div>
-                    <h3>Research Interests</h3>
-                    <p>
-                        Research interests will be added when
-                        provided.
-                    </p>
-                </article>
-
-                <article class="academic-info-card">
-                    <div class="academic-icon">📚</div>
-                    <h3>Academic Projects</h3>
-                    <p>
-                        Academic projects will be displayed here
-                        as they become available.
-                    </p>
-                </article>
-
-                <article class="academic-info-card">
-                    <div class="academic-icon">🏆</div>
-                    <h3>Certifications</h3>
-                    <p>
-                        Certifications and achievements will be
-                        added when provided.
-                    </p>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-        <p>
-            &copy; <span id="current-year"></span>
-            Milcah Chacha. All rights reserved.
-        </p>
-    </div>
-</footer>
-
-<script src="assets/js/api.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/academic.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/academic.js"></script>
 
 </body>
+
 </html>
