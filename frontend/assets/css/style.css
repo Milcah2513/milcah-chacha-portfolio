@@ -297,6 +297,27 @@ button {
     color: var(--primary);
 }
 
+/* Homepage prose introduction */
+
+.hero-description {
+    max-width: 650px;
+    margin: 20px 0;
+}
+
+.hero-description p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.95;
+    margin-bottom: 17px;
+    text-align: left;
+}
+
+.hero-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Compatibility with other pages or older hero markup */
+
 .hero-text h2 {
     color: #3d5b75;
     font-size: clamp(1.15rem, 2vw, 1.5rem);
@@ -1225,8 +1246,8 @@ button {
 
 @media (max-width: 760px) {
 
-    /* Header remains in normal document flow.
-       This prevents it from covering the hero. */
+    /* Keep the mobile header above the page without
+       allowing it to cover the homepage content. */
 
     .site-header {
         position: relative;
@@ -1244,7 +1265,7 @@ button {
         display: flex;
     }
 
-    /* Hide mobile menu until the button is clicked */
+    /* Mobile navigation stays hidden until clicked. */
 
     .nav-links {
         display: none;
@@ -1274,26 +1295,6 @@ button {
         order: 0;
     }
 
-    .nav-links li:nth-child(1) {
-        order: 1;
-    }
-
-    .nav-links li:nth-child(2) {
-        order: 2;
-    }
-
-    .nav-links li:nth-child(3) {
-        order: 3;
-    }
-
-    .nav-links li:nth-child(4) {
-        order: 4;
-    }
-
-    .nav-links li:nth-child(5) {
-        order: 5;
-    }
-
     .nav-links.show {
         display: flex;
     }
@@ -1318,7 +1319,7 @@ button {
         gap: 25px;
     }
 
-    /* Picture appears before the introduction */
+    /* Profile image appears before the introduction. */
 
     .hero-image {
         order: -1;
@@ -1343,7 +1344,7 @@ button {
         margin: 0 auto;
     }
 
-    /* Introduction appears below picture */
+    /* Prose introduction appears below the picture. */
 
     .hero-text {
         order: 1;
@@ -1362,8 +1363,21 @@ button {
         font-size: 1.15rem;
     }
 
+    .hero-description {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .hero-description p {
+        text-align: center;
+        font-size: 0.98rem;
+        line-height: 1.85;
+        margin-bottom: 16px;
+    }
+
     .hero-text > p:not(.eyebrow) {
         margin: 0 auto;
+        text-align: center;
     }
 
     .hero-buttons {
@@ -1441,6 +1455,11 @@ button {
 
     .hero-text h2 {
         font-size: 1.1rem;
+    }
+
+    .hero-description p {
+        font-size: 0.95rem;
+        line-height: 1.85;
     }
 
     .hero-text > p:not(.eyebrow) {
