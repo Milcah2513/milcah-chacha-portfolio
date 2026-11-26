@@ -1576,3 +1576,28 @@ button {
         order: 5 !important;
     }
 }
+
+/* ==========================================
+   MOBILE HEADER OVERLAP FIX
+   Prevents navigation from covering homepage content
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        position: relative !important;
+        top: auto !important;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+    }
+
+    .hero {
+        margin-top: 0 !important;
+    }
+
+}
