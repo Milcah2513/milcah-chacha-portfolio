@@ -1537,3 +1537,42 @@ button {
     }
 
 }
+/* ==========================================
+   MOBILE NAVIGATION ORDER FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+    }
+
+    .nav-links li {
+        order: 0 !important;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links li:nth-child(1) {
+        order: 1 !important;
+    }
+
+    .nav-links li:nth-child(2) {
+        order: 2 !important;
+    }
+
+    .nav-links li:nth-child(3) {
+        order: 3 !important;
+    }
+
+    .nav-links li:nth-child(4) {
+        order: 4 !important;
+    }
+
+    .nav-links li:nth-child(5) {
+        order: 5 !important;
+    }
+}
