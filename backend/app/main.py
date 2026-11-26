@@ -7,6 +7,10 @@ from .routers.portfolio import router as portfolio_router
 from .routers.contact import router as contact_router
 
 
+# ==========================================
+# FASTAPI APPLICATION
+# ==========================================
+
 app = FastAPI(
     title="Milcah Chacha Portfolio API",
     description="Backend API for Milcah Chacha's personal portfolio",
@@ -23,6 +27,11 @@ app.add_middleware(
 
     allow_origins=[
         FRONTEND_ORIGIN,
+
+        # Vercel production frontend
+        "https://milcah-chacha-portfolio-frontend.vercel.app",
+
+        # Local development
         "http://localhost:5500",
         "http://127.0.0.1:5500",
     ],
